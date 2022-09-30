@@ -1,0 +1,23 @@
+
+<div class="container">
+
+  <form [formGroup]="newFare" (ngSubmit)="getCost()" data-toggle="validator">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Source</label>
+      <input  formControlName="source" type="text" class="form-control" id="exampleInputEmail1" name="Source">
+     
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Destination</label>
+      <input type="text" formControlName="destination" class="form-control" id="exampleInputPassword1" name="Destination">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">No. of Days</label>
+      <input type="number" formControlName="days" class="form-control" id="exampleInputPassword1" name="No. of days">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+    
+  </form>
+  
+</div>

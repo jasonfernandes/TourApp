@@ -1,0 +1,50 @@
+
+
+
+<div class="container">
+<table class="table">
+    <thead>
+      <tr>
+      
+        <th scope="col">ID</th>
+        <th scope="col">Fare</th>
+        <th scope="col">Source</th>
+        <th scope="col">Destination</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let package of packages">
+     
+        <td>{{package.packageId}}</td>
+        <td>{{package.basicFare}}</td>
+        <td>{{package.source}}</td>
+        <td>{{package.destination}}</td>
+      </tr>
+
+     
+    </tbody>
+  </table>
+
+  <form [formGroup]="newForm" (ngSubmit)="postit()" data-toggle="validator">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">ID</label>
+      <input  formControlName="packageId" type="text" class="form-control" id="exampleInputEmail1" name="packageId">
+     
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Fare</label>
+      <input type="number" formControlName="basicFare" class="form-control" id="exampleInputPassword1" name=" basicFare">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Source</label>
+      <input type="text" formControlName="source" class="form-control" id="exampleInputPassword1" name="source">
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Destination</label>
+      <input type="text" formControlName="destination" class="form-control" id="exampleInputPassword1" name="destination">
+    </div>
+    <button type="submit" class="btn btn-primary">Add tour</button>
+    
+  </form>
+
+</div>
